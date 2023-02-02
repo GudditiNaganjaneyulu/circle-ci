@@ -8,8 +8,9 @@ jobs:
           username: gudditi
           password: $DOCKERHUB_PASSWORD
     steps:
+      - checkout 
       - run: sudo apt update && sudo apt install docker -y
-      - run: docker -version
+      - run: docker build -t gudditi/nginx .
       - run: cat a.txt
   say_goodbye:
     docker:
