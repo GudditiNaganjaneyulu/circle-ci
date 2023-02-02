@@ -8,8 +8,8 @@ jobs:
           username: gudditi
           password: $DOCKERHUB_PASSWORD
     steps:
-      - run: echo "hai welcome" > a.txt
-      - run: ls -ltr
+      - run: apt update && apt install docker -y
+      - run: docker -version
       - run: cat a.txt
   say_goodbye:
     docker:
