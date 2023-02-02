@@ -8,7 +8,7 @@ jobs:
           username: gudditi
           password: $DOCKERHUB_PASSWORD
     steps:
-      - run: echo "Say hello to YAML!"
+      - run: echo "Hai welcome" > a.txt
   say_goodbye:
     docker:
       - image: cimg/base:2022.05
