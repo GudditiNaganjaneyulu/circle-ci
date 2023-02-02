@@ -8,7 +8,9 @@ jobs:
           username: gudditi
           password: $DOCKERHUB_PASSWORD
     steps:
-      - run: echo "Hai welcome" > a.txt
+      - run: echo "hai welcome" > a.txt
+      - run: ls -ltr
+      - run: cat a.txt
   say_goodbye:
     docker:
       - image: cimg/base:2022.05
