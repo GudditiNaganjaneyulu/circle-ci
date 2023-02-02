@@ -10,8 +10,9 @@ jobs:
     steps:
       - checkout 
       - run: sudo apt update && sudo apt install docker -y
-      - run: docker build -t gudditi/nginx .
-      - run: cat a.txt
+      - run: sudo service docker start
+      - run: sudo docker build -t gudditi/nginx .
+      - run: sudo docker images
   say_goodbye:
     docker:
       - image: cimg/base:2022.05
